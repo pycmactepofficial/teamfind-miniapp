@@ -375,7 +375,7 @@
             const search = searchText.value.toLowerCase().trim();
 
             // Fetch data with filters
-            fetch(`/api/data?game=${encodeURIComponent(selectedGame)}&type_filter=${encodeURIComponent(selectedType)}&search=${encodeURIComponent(search)}`)
+            fetch(`https://your-api-domain.com/api/data?game=${encodeURIComponent(selectedGame)}&type_filter=${encodeURIComponent(selectedType)}&search=${encodeURIComponent(search)}`)
                 .then(response => response.json())
                 .then(filtered => {
                     if (filtered.length === 0) {
@@ -468,7 +468,7 @@
             data.id = Math.floor(Math.random() * 1000000);
 
             try {
-                const response = await fetch('/api/register', {
+                const response = await fetch('https://pycmactepofficial.github.io/teamfind-miniapp/api/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
